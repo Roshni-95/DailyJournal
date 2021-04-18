@@ -1,0 +1,12 @@
+<%- include('partials/header'); -%>
+
+<h1>Home</h1>
+<p><%= homeContent %></p>
+
+<% composeText.forEach(function(post){ %>
+<h1><%= post.title %></h1>
+<p><%= post.content.substring(0, 99)+"..." %><a href="/topic/<%= post._id %>">Read More</a></p>
+<% }); %>
+
+
+<%- include('partials/footer'); -%>
